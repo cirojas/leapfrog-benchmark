@@ -10,7 +10,7 @@ The code for our leapfrog implementation for Apache Jena is available [here]()
 - [bzip2](http://www.bzip.org/)
     - On a debian-based distro: `sudo apt install bzip2`
 - [pip](https://pip.pypa.io/en/stable/installing/)
-- [SPARQLWrapper](https://pypi.org/project/SPARQLWrapper/)
+- [SPARQLWrapper](https://pypi.org/project/SPARQLWrapper/)  
     Some of the following steps can take hours to complete, so we recommend using [tmux](https://github.com/tmux/tmux) to execute them.
 
 ### Getting the repo and the dataset
@@ -58,7 +58,7 @@ The code for our leapfrog implementation for Apache Jena is available [here]()
 ### Run the benchmark
 - Change directory into `benchmark` folder
 - `bash run-benchmark.sh queries/bgps`
-- `bash run-benchmark.sh queries/optionals`
+- `bash run-benchmark.sh queries/optionals`  
     Now the results are available in the folders `queries/bgps/output` and `queries/optionals/output`
     For each query pattern you will find a folder containing four files, one for each database. Each line of a file contains three values separated by a semicolon: `queryNumber;numberOfResutls;executionTimeInNanoseconds`
 
