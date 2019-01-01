@@ -76,4 +76,4 @@ The code for our leapfrog implementation for Apache Jena is available [here]()
 
 
 # Results
-
+You can find our results in [our repository](https://github.com/cirojas/leapfrog-benchmark/tree/gh-pages/results)
