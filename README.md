@@ -15,7 +15,11 @@ The code for our leapfrog implementation for Apache Jena is available [here]()
     Some of the following steps can take hours to complete, so we recommend using [tmux](https://github.com/tmux/tmux) to execute them.
 
 ### Getting the repo and the dataset
-- Clone this repository. `git clone git@github.com:cirojas/leapfrog-benchmark.git` if you use ssh keys or `git clone https://github.com/cirojas/leapfrog-benchmark.git` if you don't.
+- Clone this repository. 
+    - `git clone git@github.com:cirojas/leapfrog-benchmark.git` if you use ssh keys  
+    
+    or
+    - `git clone https://github.com/cirojas/leapfrog-benchmark.git` if you don't.
 - Download the [dataset used](https://drive.google.com/file/d/1vtfLE_G3nI0oAFa5xNdzz20R1pDghdHA/view?usp=sharing) and move it to the `benchmark` folder
 - Extract it `bzip2 -d wikidata-filtered.nt.bz2`
 - Or you can [construct the dataset from the latest truthy wikidata dump](#building-the-dataset)
@@ -62,6 +66,7 @@ The code for our leapfrog implementation for Apache Jena is available [here]()
 - `bash run-benchmark.sh queries/optionals`  
 
     Now the results are available in the folders `queries/bgps/output` and `queries/optionals/output`
+
     For each query pattern you will find a folder containing four files, one for each database. Each line of a file contains three values separated by a semicolon: `queryNumber;numberOfResutls;executionTimeInNanoseconds`
 
 # Building the dataset
