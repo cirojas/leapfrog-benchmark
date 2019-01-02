@@ -70,7 +70,11 @@ The code for our leapfrog implementation for Apache Jena is available [here](htt
     For each query pattern you will find a folder containing four files, one for each database. Each line of a file contains three values separated by a semicolon: `queryNumber;numberOfResutls;executionTimeInNanoseconds`
 
 # Building the dataset
-
+- Download the file `latest-truthy.nt.bz2` from [here](https://dumps.wikimedia.org/wikidatawiki/entities/)
+- Extract it `bzip2 -d latest-truthy.nt.bz2`
+- Move it to `wikidata-transformation` folder and change directory to that folder
+- Execute `python transform_wikidata1` to remove labels and descriptions from wikidata, along with strings having other language than english
+- Execute `python transform_wikidata2` to remove all properies listed in `removed_properties.txt` in our case we removed all properties that appeared more than 1.000.000 and less than 1.000 times.
 
 # Getting random queries for the benchmark
 
