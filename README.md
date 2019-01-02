@@ -77,7 +77,9 @@ The code for our leapfrog implementation for Apache Jena is available [here](htt
 - Execute `python transform_wikidata2` to remove all properies listed in `removed_properties.txt` in our case we removed all properties that appeared more than 1.000.000 and less than 1.000 times.
 
 # Getting random queries for the benchmark
-
+For each query pattern we created a java program that will find 50 random sets of properties with at least 1 result.
+The jars are in the `find-queries` folder.
+To find a query, you need to execute `java -jar find_XYZ.jar [jena-database-location] properties_wikidata.txt`, where `properties_wikidata.txt` is a file with the properties that can be chosen.
 
 # Results
 You can find our results in [our repository](https://github.com/cirojas/leapfrog-benchmark/tree/gh-pages/results)
