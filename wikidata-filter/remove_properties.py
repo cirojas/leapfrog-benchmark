@@ -1,15 +1,15 @@
 SOURCE_FILE = 'wikidata-prefiltered.nt'
-TARGET_FILE = 'wikidata-filtered.nt'
-BIG_PROPERTIES_FILE = 'removed_properties.txt'
+TARGET_FILE = 'wikidata-wcg-filtered.nt'
+REMOVED_PROPERTIES_FILE = 'removed_properties.txt'
 
-big_properties = set()
-f = open(BIG_PROPERTIES_FILE, 'r', encoding='utf-8')
+removed_properties = set()
+f = open(REMOVED_PROPERTIES_FILE, 'r', encoding='utf-8')
 while True:
     line = f.readline()
     if not (line):
         break
     else:
-        big_properties.add(line.strip())
+        removed_properties.add(line.strip())
 
 f.close
 f1 = open(SOURCE_FILE, 'r', encoding='utf-8')
@@ -20,7 +20,7 @@ while True:
         break
     else:
         p = line.split()[1]
-        if p not in big_properties:
+        if p not in removed_properties:
             f2.write(line)
 
 f1.close()
